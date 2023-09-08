@@ -1,4 +1,5 @@
-﻿string input = "29535123p48723487597645723645";
+﻿Console.WriteLine("skriv nummer o sånt");
+string input = Console.ReadLine();
 long sum = 0; // Räknar ihop summan av alla matchade tal
 string firstPart = string.Empty; //Denna del skrivs alltid ut i vitt.
 
@@ -18,6 +19,7 @@ for (int i = 0; i < input.Length; i++)
         {
             break;
         }
+        
 
         if (input[i] == input[j])
         {
