@@ -1,6 +1,8 @@
-﻿Console.WriteLine("skriv nummer o sånt");
+﻿using System.Numerics;
+
+Console.WriteLine("skriv nummer o sånt");
 string input = Console.ReadLine();
-long sum = 0; // Räknar ihop summan av alla matchade tal
+BigInteger sum = 0; // Räknar ihop summan av alla matchade tal
 string firstPart = string.Empty; //Denna del skrivs alltid ut i vitt.
 
 for (int i = 0; i < input.Length; i++)
@@ -35,7 +37,7 @@ for (int i = 0; i < input.Length; i++)
             }
 
             firstPart = firstPart.Remove(i); //ta bort det sista tecknet av firstpart så det inte blir en dublett mot det första tecknet av det giltiga talet.
-            sum += long.Parse(potentialMatch); //addera värdet
+            sum += BigInteger.Parse(potentialMatch); //addera värdet
 
             Console.Write(firstPart);           
             Console.ForegroundColor = ConsoleColor.Red;
